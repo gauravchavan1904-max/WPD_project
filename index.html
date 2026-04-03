@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Chennai Super Kings - Full Squad 2025 | Player Profiles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, 'Roboto', sans-serif;
+            background: linear-gradient(145deg, #fef9ef 0%, #fff5e6 100%);
+            color: #1e2a2f;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f0e6d2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f9a01b;
+            border-radius: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #041e2d 0%, #062c3b 100%);
+            padding: 1.2rem 2rem;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid #f9c23c;
+        }
+
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            background: #f9a01b;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #041e2d;
+            font-weight: bold;
+        }
+
+        .logo-text h1 {
+            color: #FFD966;
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            color: #d4dfe5;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            background: rgba(249, 160, 27, 0.2);
+            padding: 6px 15px;
+            border-radius: 40px;
+            color: #f9c23c;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Hero */
+        .hero {
+            background: radial-gradient(circle at 10% 30%, #092e3a, #021016);
+            margin: 25px 30px 20px 30px;
+            border-radius: 45px;
+            padding: 2rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.3);
+            border: 1px solid rgba(249, 194, 60, 0.4);
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 220px;
+            padding: 1rem;
+        }
+
+        .hero-content h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD966, #f9a01b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-content p {
+            color: #e2e8f0;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            max-width: 500px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .stat {
+            background: rgba(0,0,0,0.4);
+            padding: 5px 15px;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #f9c23c;
+        }
+
+        .hero-badge {
+            flex: 0.4;
+            text-align: center;
+            font-size: 5rem;
+            filter: drop-shadow(0 8px 12px rgba(0,0,0,0.3));
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #1f3e48;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: #f9a01b;
+            border-radius: 4px;
+        }
+
+        /* Players Grid - 7 Cards */
+        .players-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 20px;
+        }
+
+        /* Player Card - Clickable */
+        .player-card {
+            background: #ffffff;
+            border-radius: 32px;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            border: 1px solid rgba(249, 160, 27, 0.25);
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+
+        .player-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 28px 36px -12px rgba(0, 0, 0, 0.25);
+            border-color: #f9a01b;
+        }
+
+        .card-img {
+            background: linear-gradient(145deg, #021a22, #052d38);
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .player-icon {
+            font-size: 5.5rem;
+            filter: drop-shadow(4px 8px 12px rgba(0,0,0,0.4));
+            transition: 0.2s;
+        }
+
+        .player-card:hover .player-icon {
+            transform: scale(1.02);
+        }
+
+        .jersey-number {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            background: rgba(0,0,0,0.7);
+            color: #ffcd7e;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .card-info {
+            padding: 1.5rem 1.2rem 1.8rem;
+            text-align: center;
+        }
+
+        .player-name {
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: #0a2c38;
+            margin-bottom: 6px;
+        }
+
+        .player-role {
+            display: inline-block;
+            background: #fef3e2;
+            color: #c56e0a;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .player-desc {
+            font-size: 0.85rem;
+            color: #3e5a64;
+            line-height: 1.4;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        .player-stats {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-top: 1px solid #f0e2ce;
+            padding-top: 12px;
+        }
+
+        .stat-badge {
+            font-size: 0.7rem;
+            background: #f7f2e8;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #1f4e5e;
+        }
+
+        .fan-section {
+            background: linear-gradient(120deg, #041e2d, #0a3342);
+            margin: 60px 25px 40px 25px;
+            border-radius: 60px;
+            padding: 2rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+        }
+
+        .fan-text h3 {
+            color: #ffda88;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .fan-text p {
+            color: #cbd5e0;
+            font-size: 1rem;
+        }
+
+        .fan-button {
+            background: #f9a01b;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #041e2d;
+            transition: 0.2s;
+            cursor: pointer;
+            font-family: inherit;
+            box-shadow: 0 5px 0 #a55d0a;
+            transform: translateY(-2px);
+        }
+
+        .fan-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #a55d0a;
+        }
+
+        footer {
+            background: #03161f;
+            color: #a0b6c0;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 0.85rem;
+            border-top: 3px solid #f9a01b;
+        }
+
+        @media (max-width: 780px) {
+            .hero-content h2 { font-size: 1.8rem; }
+            .section-title { font-size: 1.8rem; }
+            .hero { margin: 15px; }
+        }
+        @media (max-width: 480px) {
+            .players-grid { gap: 20px; }
+            .container { padding: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="nav-container">
+        <div class="logo-area">
+            <div class="logo-icon">🦁</div>
+            <div class="logo-text">
+                <h1>CHENNAI SUPER KINGS</h1>
+                <p>#WhistlePodu | Full Squad 2025</p>
+            </div>
+        </div>
+        <div class="tagline">
+            🏆 5 x IPL Champions 🏆
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Total 7 Super Kings</h2>
+        <p>Click on any player card to open a new page with their complete profile, stats & journey. The heart of CSK!</p>
+        <div class="hero-stats">
+            <div class="stat">🔥 Click Any Player</div>
+            <div class="stat">⭐ New Page Opens</div>
+            <div class="stat">💛 Detailed Profile</div>
+        </div>
+    </div>
+    <div class="hero-badge">
+        🏏💛
+    </div>
+</section>
+
+<div class="container">
+    <h2 class="section-title">💪 The Ultimate 7 • CSK Lions</h2>
+    <div class="players-grid" id="playersGrid">
+        <!-- Player cards will be populated by JS, each card opens new page on click -->
+    </div>
+</div>
+
+<div class="fan-section">
+    <div class="fan-text">
+        <h3>💛 Whistle Podu! 💛</h3>
+        <p>Tap any player above — their exclusive profile opens in a new tab.</p>
+        <p style="font-size:0.85rem; margin-top:5px;">#Yellove | #CSK | #ThalaForAReason</p>
+    </div>
+    <button class="fan-button" id="cheerBtn">📣 Cheer for CSK 📣</button>
+</div>
+
+<footer>
+    <p>🏆 Chennai Super Kings — Pride of Tamil Nadu | 5-Time IPL Champions (2010, 2011, 2018, 2021, 2023) 🏆</p>
+    <p style="margin-top: 12px;">⚡ Click on any player card → New page with detailed biography & stats ⚡</p>
+    <p style="margin-top: 8px; font-size: 0.7rem;">© 2025 The Yellow Army | Interactive Player Profiles</p>
+</footer>
+
+<script>
+    // ------------------------------
+    // 7 CSK Players Data (Remaining + Complete 7)
+    // Each player has a unique profile page content (HTML string)
+    // When card is clicked, we create a new Blob URL (new page) with that player's detailed profile
+    // This opens in a new tab/window as requested: "photo var click kel ki new page open zal pahije"
+    // ------------------------------
+    
+    const players = [
+        {
+            id: 1,
+            name: "MS Dhoni (C)",
+            role: "Wicketkeeper • Captain • Finisher",
+            shortDesc: "The Thala. The coolest finisher in cricket history. 5000+ runs & 200+ dismissals for CSK.",
+            icon: "🧤🔥",
+            jersey: "#07",
+            stat1: "🏏 5000+ IPL runs",
+            stat2: "🧤 150+ stumpings",
+            fullProfile: {
+                title: "MS Dhoni - The Untouchable Thala",
+                bio: "Mahendra Singh Dhoni, the heart and soul of Chennai Super Kings. Under his captaincy, CSK has won 5 IPL titles. Known for his lightning-fast stumpings, helicopter shot, and calm demeanor. He is the only captain to lead a team to 10+ playoffs. A legend who transformed Indian cricket and CSK into a dynasty.",
+                careerStats: "IPL Runs: 5082+ | Average: 39+ | 200+ dismissals | 84 sixes in death overs",
+                achievements: "🏆 5 IPL Titles as Captain, 🏆 2 Champions League T20, 🏆 2011 World Cup (India), 🏆 Padma Shri, 🏆 ICC ODI Player of the Year",
+                funFact: "MS Dhoni has never hit a century in IPL but has finished more games than anyone else. His jersey #07 is iconic."
+            }
+        },
+        {
+            id: 2,
+            name: "Ruturaj Gaikwad",
+            role: "Top-Order Batter • Orange Cap Winner",
+            shortDesc: "Elegant stroke-maker, future captain. Orange Cap 2021. CSK's batting pillar.",
+            icon: "🏏⚡",
+            jersey: "#31",
+            stat1: "🏏 2000+ runs",
+            stat2: "🔥 SR 135+",
+            fullProfile: {
+                title: "Ruturaj Gaikwad - The Next Gen Superstar",
+                bio: "Ruturaj Gaikwad emerged as CSK's batting mainstay after a stellar 2021 season where he won the Orange Cap with 635 runs. His classical technique and ability to play both pace and spin makes him special. He is being groomed as future captain.",
+                careerStats: "IPL Runs: 2,200+ | Highest Score: 101* | 3 Centuries in IPL | Strike Rate 136",
+                achievements: "🏆 Orange Cap 2021, 🏆 Emerging Player Award, 🏆 Leading run-scorer for CSK in 2023 playoffs",
+                funFact: "Ruturaj survived COVID-19 just before the 2020 IPL and then smashed three consecutive fifties!"
+            }
+        },
+        {
+            id: 3,
+            name: "Ravindra Jadeja",
+            role: "All-Rounder • Rockstar Fielder",
+            shortDesc: "Sir Jadeja! Electric fielding, death-over hitting, and cunning spin.",
+            icon: "🔄🌪️",
+            jersey: "#08",
+            stat1: "⚡ 150+ wkts",
+            stat2: "🏏 2500+ runs",
+            fullProfile: {
+                title: "Ravindra Jadeja - The Rockstar All-Rounder",
+                bio: "Jadeja is the ultimate game-changer. He can win matches with bat, ball, or his jaw-dropping fielding. For CSK, he has been the go-to bowler in middle overs and a furious finisher. His 'sword celebration' is iconic.",
+                careerStats: "IPL: 150+ wickets & 2600+ runs | Best bowling: 5/16 | Economy: 7.6",
+                achievements: "🏆 2 IPL titles with CSK (2018,2021), 🏆 ICC Test Cricketer of Year, 🏆 2011 World Cup winner",
+                funFact: "Jadeja once scored 37 runs in an over in Ranji Trophy. He is also a sword collector."
+            }
+        },
+        {
+            id: 4,
+            name: "Devon Conway",
+            role: "Opener • Wicketkeeper Batter",
+            shortDesc: "Left-handed elegance, consistent run-machine. Crucial 2023 season performer.",
+            icon: "🇳🇿🏏",
+            jersey: "#88",
+            stat1: "⭐ 900+ runs in 2023",
+            stat2: "🎯 140+ SR",
+            fullProfile: {
+                title: "Devon Conway - The Kiwi Run Machine",
+                bio: "Devon Conway brought stability to CSK's top order. His calm approach and ability to anchor innings while maintaining strike rate makes him a perfect partner for Gaikwad. He was instrumental in CSK's 2023 triumph.",
+                careerStats: "IPL 2023: 672 runs at avg 51.69 | T20I: 1500+ runs for NZ",
+                achievements: "🏆 IPL 2023 Winner, 🏆 NZ Cricketer of Year nominee, 🏆 Fastest to 1000 T20I runs",
+                funFact: "Conway originally from South Africa, moved to NZ and now owns multiple records at Chepauk."
+            }
+        },
+        {
+            id: 5,
+            name: "Shivam Dube",
+            role: "Power-Hitter • Medium Pace",
+            shortDesc: "Six-hitting machine against spin. Game-changer in middle overs.",
+            icon: "💪🏏",
+            jersey: "#25",
+            stat1: "💥 30+ sixes in 2023",
+            stat2: "🔥 SR 158+",
+            fullProfile: {
+                title: "Shivam Dube - The Six-Hitting Giant",
+                bio: "Shivam Dube resurrected his career with CSK, becoming a designated spin basher. His ability to clear long boundaries made Chepauk roar. Provides crucial medium-pace overs too.",
+                careerStats: "IPL 2023: 418 runs @ 158 SR | 35 sixes | 7 wickets with medium pace",
+                achievements: "🏆 Impact Player of the Match in 2023 final, 🏆 Most sixes for CSK in middle overs",
+                funFact: "Dube once hit 5 sixes in an over against R Sai Kishore in practice matches. He idolates Yuvraj Singh."
+            }
+        },
+        {
+            id: 6,
+            name: "Deepak Chahar",
+            role: "Swing Bowler • Powerplay Specialist",
+            shortDesc: "New-ball wizard, swings it both ways. CSK's wicket-taker in first 6 overs.",
+            icon: "🌪️☁️",
+            jersey: "#90",
+            stat1: "🎯 70+ IPL wickets",
+            stat2: "🔄 Best: 4/13",
+            fullProfile: {
+                title: "Deepak Chahar - Swing King",
+                bio: "Deepak Chahar is CSK's new-ball enforcer. His ability to swing the ball both ways inside powerplay has earned him wickets consistently. Also a handy lower-order hitter with a T20 half-century.",
+                careerStats: "IPL wickets: 72 | Economy: 7.8 | Best figures: 4/13 vs MI",
+                achievements: "🏆 IPL 2018 & 2021 winner, 🏆 Hat-trick in T20I for India, 🏆 Purple Cap contender 2019",
+                funFact: "Deepak Chahar's father was a fast bowler in army. He also holds record for best bowling figures in T20I (6/7)."
+            }
+        },
+        {
+            id: 7,
+            name: "Matheesha Pathirana",
+            role: "Death Over Specialist • Slingy Action",
+            shortDesc: "Baby Malinga! Yorker kingpin at the death. CSK's future pace star.",
+            icon: "🏹☄️",
+            jersey: "#63",
+            stat1: "⚡ Economy under 8.5",
+            stat2: "🔥 15 wkts in 2023",
+            fullProfile: {
+                title: "Matheesha Pathirana - The Sling Sensation",
+                bio: "Nicknamed 'Baby Malinga', Pathirana's slingy action and pinpoint yorkers have made him CSK's death-over specialist. Discovered by Dhoni, he delivers under pressure and has become a key overseas star.",
+                careerStats: "IPL 2023: 19 wickets @ 7.89 econ | Best: 3/15 | T20I for Sri Lanka",
+                achievements: "🏆 Emerging player of IPL 2023 nominee, 🏆 CSK's highest wicket-taker in death overs",
+                funFact: "Pathirana grew up watching Lasith Malinga and practiced by bowling to a single stump. He has a unique grip that confuses batters."
+            }
+        }
+    ];
+
+    // Function to generate a complete detailed HTML page for a player
+    function generatePlayerPage(player) {
+        const profile = player.fullProfile;
+        return `<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>${player.name} | CSK Player Profile</title>
+            <style>
+                * { margin:0; padding:0; box-sizing: border-box; }
+                body {
+                    font-family: 'Segoe UI', Roboto, 'Poppins', sans-serif;
+                    background: linear-gradient(135deg, #fff9ef, #fff0e0);
+                    color: #1f2f38;
+                    padding: 2rem;
+                }
+                .profile-container {
+                    max-width: 1000px;
+                    margin: 30px auto;
+                    background: white;
+                    border-radius: 48px;
+                    overflow: hidden;
+                    box-shadow: 0 30px 40px rgba(0,0,0,0.15);
+                    border: 1px solid #f9c23c;
+                }
+                .profile-header {
+                    background: linear-gradient(120deg, #041e2d, #0b3b4a);
+                    padding: 2rem;
+                    text-align: center;
+                    color: #FFD966;
+                }
+                .profile-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+                .profile-header p { font-size: 1.1rem; color: #e2dccd; }
+                .player-icon-large {
+                    font-size: 5rem;
+                    background: #f9a01b22;
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 auto 15px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #f9a01b;
+                    box-shadow: 0 8px 14px black;
+                }
+                .content { padding: 2rem 2rem; }
+                .bio, .stats-box, .achievements, .fun-fact {
+                    margin-bottom: 2rem;
+                    border-bottom: 1px solid #f0e2ce;
+                    padding-bottom: 1rem;
+                }
+                h2 { color: #c56e0a; margin-bottom: 12px; font-size: 1.7rem; }
+                .stats-grid {
+                    background: #fef6e8;
+                    padding: 1rem;
+                    border-radius: 28px;
+                    font-weight: 500;
+                }
+                .back-btn {
+                    display: inline-block;
+                    background: #f9a01b;
+                    color: #041e2d;
+                    padding: 10px 28px;
+                    border-radius: 40px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    margin: 20px 0 10px;
+                    transition: 0.2s;
+                    border: none;
+                    cursor: pointer;
+                }
+                .back-btn:hover { background: #e08e0b; transform: scale(1.02); }
+                footer { text-align: center; margin-top: 20px; color: #6f6f6f; }
+                @media (max-width: 650px) { body { padding: 1rem; } .profile-header h1 { font-size: 1.8rem; } }
+            </style>
+        </head>
+        <body>
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="player-icon-large">${player.icon}</div>
+                    <h1>${player.name}</h1>
+                    <p>${player.role} | Jersey ${player.jersey}</p>
+                </div>
+                <div class="content">
+                    <div class="bio">
+                        <h2>📖 Player Biography</h2>
+                        <p style="font-size:1.05rem; line-height:1.5;">${profile.bio}</p>
+                    </div>
+                    <div class="stats-box">
+                        <h2>🏏 Career Highlights (IPL / T20)</h2>
+                        <div class="stats-grid">${profile.careerStats}</div>
+                    </div>
+                    <div class="achievements">
+                        <h2>🏆 Major Achievements</h2>
+                        <p>${profile.achievements}</p>
+                    </div>
+                    <div class="fun-fact">
+                        <h2>✨ Fun Fact</h2>
+                        <p>💛 ${profile.funFact}</p>
+                    </div>
+                    <button class="back-btn" onclick="window.close()">🔙 Close this page & return to CSK squad</button>
+                    <p style="margin-top: 15px; font-size:0.8rem;">#WhistlePodu | Chennai Super Kings Family</p>
+                </div>
+            </div>
+            <footer>CSK Official Tribute — Player Profile</footer>
+            <script>
+                // optional: pressing close button safely
+                console.log("${player.name} profile page loaded");
+            <\/script>
+        </body>
+        </html>`;
+    }
+
+    // Build the players grid dynamically
+    const gridContainer = document.getElementById('playersGrid');
+    
+    players.forEach(player => {
+        // Create card div wrapper (anchor-like but we use click on div)
+        const card = document.createElement('div');
+        card.className = 'player-card';
+        
+        // inner HTML structure
+        card.innerHTML = `
+            <div class="card-img">
+                <div class="player-icon">${player.icon}</div>
+                <div class="jersey-number">${player.jersey}</div>
+            </div>
+            <div class="card-info">
+                <div class="player-name">${player.name}</div>
+                <div class="player-role">${player.role}</div>
+                <div class="player-desc">${player.shortDesc}</div>
+                <div class="player-stats">
+                    <span class="stat-badge">${player.stat1}</span>
+                    <span class="stat-badge">${player.stat2}</span>
+                </div>
+            </div>
+        `;
+        
+        // Add click event: opens new page with detailed profile (new tab)
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            // generate the full HTML page for this player
+            const pageHtml = generatePlayerPage(player);
+            // create a blob and open in new window/tab
+            const blob = new Blob([pageHtml], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            window.open(url, '_blank');  // new page opens as requested
+            // revoke after a short delay to free memory
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
+        });
+        
+        gridContainer.appendChild(card);
+    });
+
+    // Cheer button interaction
+    const cheerBtn = document.getElementById('cheerBtn');
+    if (cheerBtn) {
+        cheerBtn.addEventListener('click', () => {
+            const messages = [
+                "💛 WHISTLE PODU! CSK CSK! 💛",
+                "🔥 Thala for a reason! New page feature active 🔥",
+                "🏏 Click any player - detailed profile opens! 🏏",
+                "⚡ Yellow jersey = Royalty ⚡",
+                "🌟 7 Super Kings, 7 Legends! 🌟"
+            ];
+            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+            alert(randomMsg);
+            cheerBtn.style.transform = "scale(0.97)";
+            setTimeout(() => { cheerBtn.style.transform = ""; }, 150);
+        });
+    }
+    console.log("CSK 7 Players — Click on any player card, new page with full profile opens automatically");
+</script>
+<h4><i><b><center>create by Gaurav chavan</center></b></i></h4>
+</body>
+</html
